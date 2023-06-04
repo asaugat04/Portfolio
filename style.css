@@ -40,16 +40,29 @@ body {
 }
 
 .title {
-		font-family: 'Poiret One', cursive;
+	font-family: 'Poiret One', cursive;
+	text-align: center;
 	font-size: 4rem;
-  margin-bottom: .5rem;
+	margin-bottom: .5rem;
 	width: 100%;
 }
 
 .sub-title {
-  border-top: .1rem solid #fff;
-  padding: 1rem 4rem;
+	border-top: .1rem solid #fff;
+	padding: 1rem 4rem;
 	text-align: center;
+}
+
+@media screen and (max-width:400px) {
+	.title {
+		font-size: 2rem;
+	}
+
+	.sub-title {
+		font-size: 1.2rem;
+		width: min-content;
+		margin: 0 1rem;
+	}
 }
 
 
@@ -113,6 +126,7 @@ body {
 	from {
 		transform: translateY(0px);
 	}
+
 	to {
 		transform: translateY(-2000px);
 	}
