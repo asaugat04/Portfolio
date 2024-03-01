@@ -42,15 +42,35 @@ body {
 .title {
 	font-family: 'Poiret One', cursive;
 	text-align: center;
-	font-size: 4rem;
+	font-size: 3.2rem;
 	margin-bottom: .5rem;
 	width: 100%;
 }
 
 .sub-title {
-	border-top: .1rem solid #fff;
+	border-bottom: .1rem solid #fff;
 	padding: 1rem 4rem;
 	text-align: center;
+}
+
+.description {
+	max-width: 50%;
+	text-align: center;
+}
+
+.links {
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+a {
+	color: #fff
+}
+
+a :hover {
+	color: #ffbfbf;
 }
 
 @media screen and (max-width:400px) {
