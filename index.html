@@ -8,13 +8,58 @@
     />
     <meta name="description" content="A simple portfolio website" />
     <meta name="author" content="Saugat Adhikari" />
-
     <title>Saugat Adhikari</title>
 
-    <link rel="stylesheet" defer href="css/bootstrap.min.css" />
-    <link rel="stylesheet" defer href="css/unicons.css" />
-    <link rel="stylesheet" defer href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" defer href="css/owl.theme.default.min.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      href="css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/unicons.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/owl.carousel.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="css/owl.theme.default.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" defer href="css/bootstrap.min.css" />
+      <link rel="stylesheet" defer href="css/unicons.css" />
+      <link rel="stylesheet" defer href="css/owl.carousel.min.css" />
+      <link rel="stylesheet" defer href="css/owl.theme.default.min.css" />
+    </noscript>
     <script
       src="https://kit.fontawesome.com/35deec5c2c.js"
       defer
@@ -160,6 +205,7 @@
                     src="images/certifications/project-image01.png"
                     class="img-fluid pl-5 pr-5"
                     alt="project image"
+                    loading="lazy"
                   />
                   <h3 class="title mt-2">React.js and GitHub</h3>
                   <p class="description pl-1 pr-1 ml-4" style="width: 93%">
@@ -175,6 +221,7 @@
                     src="images/certifications/project-image01.png"
                     class="img-fluid pl-5 pr-5"
                     alt="project image"
+                    loading="lazy"
                   />
                   <h3 class="title mt-2">Cyber Security</h3>
                   <p class="description pl-1 pr-1 ml-4" style="width: 93%">
@@ -428,6 +475,8 @@
                     class="rounded float-start"
                     src="./images/myimage.png"
                     height="100"
+                    alt="image of saugat adhikari"
+                    loading="lazy"
                   />
                   <h2 class="ml-3 text-white" style="width: min-content">
                     Saugat Adhikari
