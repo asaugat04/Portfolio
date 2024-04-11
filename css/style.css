@@ -479,6 +479,7 @@ strong {
 }
 
 .social-links {
+  height: min-content;
   font-size: larger;
   display: flex;
 }
@@ -540,6 +541,7 @@ strong {
 @media (max-width: 580px) {
   /* my addition for dark theme in sm devices */
   .social-links {
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
