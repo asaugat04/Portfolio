@@ -45,4 +45,11 @@
       $(".navbar-toggler").click();
     }
   });
+  //website views counter
+  $.getJSON(
+    "https://api.countapi.xyz/hit/asaugat.com.np/visits",
+    function (response) {
+      $("#visits").text(response.value);
+    }
+  );
 })(jQuery);
