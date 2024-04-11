@@ -339,25 +339,27 @@
             <div class="contact-form">
               <h2 class="mb-4">Interested to work together? Let's talk</h2>
 
-              <form action="" method="get">
+              <form id="contactForm">
                 <div class="row">
                   <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                    <input required type="text" class="form-control" name="name" placeholder="Your Name" id="name">
                   </div>
 
                   <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                    <input required type="email" class="form-control" name="email" placeholder="Email" id="email">
                   </div>
 
                   <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                    <textarea required name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
                     <input type="submit" class="form-control submit-btn" value="Send Button">
                   </div>
+                  <span id="submit-msg" class="p-1 rounded "></span>
                 </div>
               </form>
+              
             </div>
           </div>
 
@@ -372,13 +374,13 @@
 
                     <div class="col-lg-12 col-12">                                
                         <p class="copyright-text text-center">Copyright &copy; 2023 Saugat Adhikari . All rights reserved</p>
-                        <p class="text-center small ">Website Views: <span class="visits bg-dark text-light  px-2  rounded ">XX</span></p>
+                        <!-- <p class="text-center small ">Website Views: <span class="visits bg-dark text-light  px-2  rounded ">XX</span></p> -->
                       </div>
                     
                </div>
           </div>
      </footer>
-
+     
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -394,6 +396,38 @@
         $('body').toggleClass('dark-mode')
       }
 
+      contactFormMsgArea = document.getElementById("submit-msg")
+
+      function displayinContactFormMsgArea(msg,classname){
+        contactFormMsgArea.style.display = "inline"
+        contactFormMsgArea.classList.add(classname)
+        contactFormMsgArea.innerHTML = msg
+        setTimeout(() => {
+          contactFormMsgArea.style.display = "none"
+        }, 1000);
+      }
+
+      let form=document.getElementById("contactForm");
+      form.addEventListener("submit", submitform)
+      function submitform(e){
+        console.log("Form submitted")
+        e.preventDefault()
+        var name = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var message = document.getElementById("message").value
+        fetch("https://api.apispreadsheets.com/data/4NADYyodriY6Z4Lh/", {
+          method: "POST",
+          body: JSON.stringify({"data": {"Name":name,"Email":email,"Message":message}}),
+        }).then(res =>{
+          if (res.status === 201){
+           displayinContactFormMsgArea("✔️ Message sent successfully","bg-success")
+          }
+          else{
+            displayinContactFormMsgArea("❌ Error occoured","bg-danger")
+
+          }
+        })
+      }
     </script>
   </body>
 </html>

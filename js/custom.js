@@ -45,19 +45,19 @@
       $(".navbar-toggler").click();
     }
   });
-  //website views counter
-  $.ajax({
-    method: "GET",
-    url: "https://api.api-ninjas.com/v1/counter?id=asaugat.com.np&hit=true",
-    headers: { "X-Api-Key": "ALbQUdJXjOWIivucCF65jQ==szAueuDVpd2xwV6k" },
-    contentType: "application/json",
-    success: function (result) {
-      console.log(result);
-      $(".visits").text(result.visits);
-    },
-    error: function ajaxError(jqXHR) {
-      console.error("Error: ", jqXHR.responseText);
-    },
-  });
+  //website views counter(incomplete)
+  // $.ajax({
+  //   method: "GET",
+  //   url: "https://api.api-ninjas.com/v1/counter?id=asaugat.com.np&hit=true",
+  //   headers: { "X-Api-Key": "ALbQUdJXjOWIivucCF65jQ==szAueuDVpd2xwV6k" },
+  //   contentType: "application/json",
+  //   success: function (result) {
+  //     console.log(result);
+  //     $(".visits").text(result.visits);
+  //   },
+  //   error: function ajaxError(jqXHR) {
+  //     console.error("Error: ", jqXHR.responseText);
+  //   },
+  // });
   // views counter end
 })(jQuery);
