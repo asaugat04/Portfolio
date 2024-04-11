@@ -46,10 +46,18 @@
     }
   });
   //website views counter
-  $.getJSON(
-    "https://api.countapi.xyz/hit/asaugat.com.np/visits",
-    function (response) {
-      $("#visits").text(response.value);
-    }
-  );
+  $.ajax({
+    method: "GET",
+    url: "https://api.api-ninjas.com/v1/counter?id=asaugat.com.np&hit=true",
+    headers: { "X-Api-Key": "ALbQUdJXjOWIivucCF65jQ==szAueuDVpd2xwV6k" },
+    contentType: "application/json",
+    success: function (result) {
+      console.log(result);
+      $(".visits").text(result.visits);
+    },
+    error: function ajaxError(jqXHR) {
+      console.error("Error: ", jqXHR.responseText);
+    },
+  });
+  // views counter end
 })(jQuery);
