@@ -1,10 +1,27 @@
 (function ($) {
-  "use strict";
+  ("use strict");
 
   // COLOR MODE
   $(".color-mode").click(function () {
     $(".color-mode-icon").toggleClass("active");
     $("body").toggleClass("dark-mode");
+  });
+
+  // Define the media query based on the user's color scheme preference
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Function to toggle dark mode
+  function toggleDarkMode(isDark) {
+    $(".color-mode-icon").toggleClass("active", isDark);
+    $("body").toggleClass("dark-mode", isDark);
+  }
+
+  // Set the initial color scheme based on the user's current preference
+  toggleDarkMode(prefersDarkScheme.matches);
+
+  // Listen for changes in the color scheme preference
+  prefersDarkScheme.addListener((e) => {
+    toggleDarkMode(e.matches);
   });
 
   // HEADER
