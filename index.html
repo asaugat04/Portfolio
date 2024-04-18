@@ -651,6 +651,15 @@
         var email = document.getElementById("email").value;
         var message = document.getElementById("message").value;
 
+        //saving data to apispreadsheets
+        fetch("https://api.apispreadsheets.com/data/4NADYyodriY6Z4Lh/", {
+          method: "POST",
+          body: JSON.stringify({
+            data: { Name: name, Email: email, Message: message },
+          }),
+        });
+
+        //sending email
         fetch("https://formsubmit.co/ajax/asaugat04@gmail.com", {
           method: "POST",
           headers: {
