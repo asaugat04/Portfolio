@@ -657,9 +657,25 @@
           body: JSON.stringify({
             data: { Name: name, Email: email, Message: message },
           }),
+        }).then((res) => {
+          if (res.status === 201) {
+            displayinContactFormMsgArea(
+              "✔️ Message sent successfully",
+              "bg-success"
+            );
+            //clearing the form
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+          } else {
+            displayinContactFormMsgArea(
+              "❌ Error occoured! Try again",
+              "bg-danger"
+            );
+          }
         });
 
-        //sending email
+        //attempt to send email
         fetch("https://formsubmit.co/ajax/asaugat04@gmail.com", {
           method: "POST",
           headers: {
@@ -667,15 +683,6 @@
             Accept: "application/json",
           },
           body: JSON.stringify({ Name: name, Email: email, Message: message }),
-        }).then((res) => {
-          if (res.status === 201) {
-            displayinContactFormMsgArea(
-              "✔️ Message sent successfully",
-              "bg-success"
-            );
-          } else {
-            displayinContactFormMsgArea("❌ Error occoured", "bg-danger");
-          }
         });
       }
     </script>
