@@ -650,11 +650,14 @@
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var message = document.getElementById("message").value;
-        fetch("https://api.apispreadsheets.com/data/4NADYyodriY6Z4Lh/", {
+
+        fetch("https://formsubmit.co/ajax/asaugat04@gmail.com", {
           method: "POST",
-          body: JSON.stringify({
-            data: { Name: name, Email: email, Message: message },
-          }),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({ Name: name, Email: email, Message: message }),
         }).then((res) => {
           if (res.status === 201) {
             displayinContactFormMsgArea(
