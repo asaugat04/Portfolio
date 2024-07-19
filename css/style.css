@@ -340,6 +340,9 @@ strong {
 .dark-mode input::placeholder,.dark-mode textarea::placeholder{
   color: #CCCCCC;
 }
+.dark-mode input,.dark-mode textarea{
+  color: #000;
+}
 .timeline-wrapper {
   position: relative;
   padding: 22px 0;
