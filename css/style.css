@@ -337,7 +337,9 @@ strong {
 .dark-mode .owl-carousel button.owl-dot {
   color: #ffffff;
 }
-
+.dark-mode input::placeholder,.dark-mode textarea::placeholder{
+  color: #CCCCCC;
+}
 .timeline-wrapper {
   position: relative;
   padding: 22px 0;
@@ -457,7 +459,7 @@ strong {
 .contact-form .submit-btn {
   background: #ffc200;
   border-radius: 50px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
   border: 0;
   cursor: pointer;
@@ -465,6 +467,7 @@ strong {
 }
 .contact-form .submit-btn:hover {
   background: #474559;
+  color: #ffffff;
 }
 
 .contact-info {
