@@ -117,7 +117,7 @@
             </li>
           </ul>
 
-          <ul class="navbar-nav ml-lg-auto">
+          <div class="navbar-nav ml-lg-auto">
             <div class="ml-lg-4">
               <div
                 class="color-mode d-lg-flex justify-content-center align-items-center"
@@ -126,7 +126,7 @@
                 <span class="color-mode-text">Color mode</span>
               </div>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -672,7 +672,6 @@
       let form = document.getElementById("contactForm");
       form.addEventListener("submit", submitform);
       function submitform(e) {
-        console.log("Form submitted");
         e.preventDefault();
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
