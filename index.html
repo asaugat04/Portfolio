@@ -6,9 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="A simple portfolio website" />
+    <meta
+      name="description"
+      content="Saugat Adhikari's portfolio website showcasing web development skills and projects"
+    />
     <meta name="author" content="Saugat Adhikari" />
-    <title>Saugat Adhikari</title>
+    <title>Saugat Adhikari - Web Developer Portfolio</title>
 
     <link
       rel="apple-touch-icon"
@@ -55,10 +58,10 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-      <link rel="stylesheet" defer href="css/bootstrap.min.css" />
-      <link rel="stylesheet" defer href="css/unicons.css" />
-      <link rel="stylesheet" defer href="css/owl.carousel.min.css" />
-      <link rel="stylesheet" defer href="css/owl.theme.default.min.css" />
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/unicons.css" />
+      <link rel="stylesheet" href="css/owl.carousel.min.css" />
+      <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     </noscript>
     <script
       src="https://kit.fontawesome.com/35deec5c2c.js"
@@ -179,7 +182,10 @@
               <img
                 src="images/undraw/undraw_software_engineer_lvl5.svg"
                 class="img-fluid"
-                alt="svg image"
+                alt="Software engineer illustration"
+                width="500"
+                height="400"
+                loading="lazy"
               />
             </div>
           </div>
@@ -204,7 +210,9 @@
                   <img
                     src="images/certifications/project-image01.jpeg"
                     class="img-fluid pl-5 pr-5"
-                    alt="project image"
+                    alt="React.js and GitHub certification"
+                    width="400"
+                    height="300"
                     loading="lazy"
                   />
                   <h3 class="title mt-2">React.js and GitHub</h3>
@@ -220,7 +228,9 @@
                   <img
                     src="images/certifications/project-image01.jpeg"
                     class="img-fluid pl-5 pr-5"
-                    alt="project image"
+                    alt="Cyber Security certification"
+                    width="400"
+                    height="300"
                     loading="lazy"
                   />
                   <h3 class="title mt-2">Cyber Security</h3>
@@ -484,6 +494,7 @@
                 </div>
                 <div class="social-links">
                   <a
+                    tabindex="-1"
                     href="https://www.facebook.com/asaugat04"
                     class="fa-brands fa-facebook mx-1"
                     data-toggle="tooltip"
@@ -491,6 +502,7 @@
                     title="Facebook"
                   ></a>
                   <a
+                    tabindex="-1"
                     href="https://www.instagram.com/asaugat04"
                     class="fa-brands fa-instagram mx-1"
                     data-toggle="tooltip"
@@ -498,6 +510,7 @@
                     title="Instagram"
                   ></a>
                   <a
+                    tabindex="-1"
                     href="https://www.github.com/asaugat04"
                     class="fa-brands fa-github mx-1"
                     data-toggle="tooltip"
@@ -616,20 +629,25 @@
             <p class="copyright-text text-center">
               Copyright &copy; 2023 Saugat Adhikari . All rights reserved
             </p>
-            <!-- <p class="text-center small ">Website Views: <span class="visits bg-dark text-light  px-2  rounded ">XX</span></p> -->
           </div>
         </div>
       </div>
     </footer>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CZP95N89G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-5CZP95N89G');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5CZP95N89G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5CZP95N89G");
+    </script>
     <!-- Google tag (gtag.js) end -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -689,7 +707,7 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json",
+            "Accept": "application/json",
           },
           body: JSON.stringify({ Name: name, Email: email, Message: message }),
         });
