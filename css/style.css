@@ -341,7 +341,7 @@ strong {
   color: #CCCCCC;
 }
 .dark-mode input,.dark-mode textarea{
-  color: #000;
+  color: #fff;
 }
 .timeline-wrapper {
   position: relative;
