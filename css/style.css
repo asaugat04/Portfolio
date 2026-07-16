@@ -106,9 +106,8 @@ strong {
 
 .animated-info {
   display: inline-block;
-  vertical-align: top;
-  margin-top: 5px;
-  min-width: 282px;
+  vertical-align: bottom;
+  min-width: 420px;
   position: relative;
 }
 
@@ -117,13 +116,14 @@ strong {
 }
 
 .animated-item {
-  font-size: 38px;
-  line-height: inherit;
+  font-size: 1em;
+  line-height: normal;
   display: block;
   opacity: 0;
   overflow: hidden;
+  white-space: nowrap;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   left: 0;
   animation: BottomTotop 6s linear infinite 0s;
@@ -138,25 +138,19 @@ strong {
 @keyframes BottomTotop {
   0% {
     opacity: 0;
+    transform: translateY(8px);
   }
-  5% {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  10% {
+  4% {
     opacity: 1;
     transform: translateY(0px);
   }
-  25% {
+  29% {
     opacity: 1;
     transform: translateY(0px);
   }
-  30% {
+  33% {
     opacity: 0;
-    transform: translateY(5px);
-  }
-  80% {
-    opacity: 0;
+    transform: translateY(-8px);
   }
   100% {
     opacity: 0;
@@ -391,6 +385,57 @@ strong {
   margin-left: 15px;
 }
 
+.project-card {
+  background: #f7f7f9;
+  border-radius: 12px;
+  padding: 28px 30px;
+  height: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.project-card-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.project-card-subtitle {
+  color: #5b5b5b;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.project-tags {
+  margin-bottom: 18px;
+}
+.tech-tag {
+  display: inline-block;
+  background: #474559;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin: 0 8px 8px 0;
+}
+.project-checklist {
+  margin: 0;
+}
+.project-checklist li {
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.project-checklist li i {
+  color: #ffc200;
+  margin-right: 8px;
+}
+.dark-mode .project-card {
+  background: #0d0c15;
+}
+.dark-mode .project-card-subtitle,
+.dark-mode .project-checklist li {
+  color: #d2d2d2;
+}
+
 .owl-carousel .owl-nav span {
   display: none;
 }
@@ -530,8 +575,8 @@ strong {
     font-size: 2em;
   }
 
-  .animated-item {
-    font-size: 28px;
+  .animated-info {
+    min-width: 320px;
   }
 
   .navbar-collapse {
@@ -560,11 +605,12 @@ strong {
   .color-mode-text {
     display: block;
   }
-  .animated-info {
-    min-width: 215px;
+  h1 {
+    font-size: 1.7em;
   }
-  .animated-item {
-    font-size: 30px;
+
+  .animated-info {
+    min-width: 280px;
   }
 
   .custom-btn-group {
