@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Saugat Adhikari - Software Engineer Portfolio",
+  "short_name": "Saugat Adhikari",
   "icons": [
     {
       "src": "/images/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#474559",
   "background_color": "#ffffff",
   "display": "standalone"
 }

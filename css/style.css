@@ -126,13 +126,10 @@ strong {
   bottom: 0;
   right: 0;
   left: 0;
-  animation: BottomTotop 6s linear infinite 0s;
+  animation: BottomTotop 4s linear infinite 0s;
 }
 .animated-item:nth-child(2n + 2) {
   animation-delay: 2s;
-}
-.animated-item:nth-child(3n + 3) {
-  animation-delay: 4s;
 }
 
 @keyframes BottomTotop {
@@ -140,15 +137,15 @@ strong {
     opacity: 0;
     transform: translateY(8px);
   }
-  4% {
+  6% {
     opacity: 1;
     transform: translateY(0px);
   }
-  29% {
+  44% {
     opacity: 1;
     transform: translateY(0px);
   }
-  33% {
+  50% {
     opacity: 0;
     transform: translateY(-8px);
   }

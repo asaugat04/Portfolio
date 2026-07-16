@@ -1,902 +1,754 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="Saugat Adhikari's portfolio - Software Engineer with 3+ years of experience building scalable web applications with React, Next.js, and TypeScript"
-    />
-    <meta name="author" content="Saugat Adhikari" />
-    <title>Saugat Adhikari - Software Engineer Portfolio</title>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="site.webmanifest" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description"
+    content="Saugat Adhikari - Kathmandu-based Software Engineer specializing in React, Next.js, TypeScript & NestJS. 3+ years building scalable, production-ready web apps." />
+  <meta name="keywords"
+    content="Saugat Adhikari, Software Engineer Nepal, Frontend Engineer Kathmandu, React Developer, Next.js Developer, TypeScript Developer, NestJS Developer, Full Stack Developer Nepal" />
+  <meta name="author" content="Saugat Adhikari" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://asaugat.com.np/" />
+  <title>Saugat Adhikari | Software Engineer in Kathmandu, Nepal</title>
 
-    <link
-      rel="preload"
-      href="css/bootstrap.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="css/unicons.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="css/owl.carousel.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <link
-      rel="preload"
-      href="css/owl.theme.default.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="css/bootstrap.min.css" />
-      <link rel="stylesheet" href="css/unicons.css" />
-      <link rel="stylesheet" href="css/owl.carousel.min.css" />
-      <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    </noscript>
-    <script
-      src="https://kit.fontawesome.com/35deec5c2c.js"
-      defer
-      crossorigin="anonymous"
-    ></script>
-    <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"
-          ><i class="uil uil-user"></i> Saugat</a
-        >
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asaugat.com.np/" />
+  <meta property="og:title" content="Saugat Adhikari | Software Engineer in Kathmandu, Nepal" />
+  <meta property="og:description"
+    content="I'm a Software Engineer based in Kathmandu, Nepal, building scalable web applications with React, Next.js, TypeScript, and NestJS. Take a look at my projects, experience, and resume." />
+  <meta property="og:image" content="https://asaugat.com.np/images/myimage.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Saugat Adhikari" />
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://asaugat.com.np/" />
+  <meta name="twitter:title" content="Saugat Adhikari | Software Engineer in Kathmandu, Nepal" />
+  <meta name="twitter:description"
+    content="Software Engineer in Kathmandu, Nepal building scalable web apps with React, Next.js, TypeScript & NestJS. 3+ years of experience — projects, work history, and resume inside." />
+  <meta name="twitter:image" content="https://asaugat.com.np/images/myimage.png" />
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a href="#about" class="nav-link"
-                ><span data-hover="About">About</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#project" class="nav-link"
-                ><span data-hover="Certifications">Certifications</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link"
-                ><span data-hover="Projects">Projects</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#resume" class="nav-link"
-                ><span data-hover="Resume">Resume</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link"
-                ><span data-hover="Contact">Contact</span></a
-              >
-            </li>
-          </ul>
+  <meta name="theme-color" content="#474559" />
 
-          <div class="navbar-nav ml-lg-auto">
-            <div class="ml-lg-4">
-              <div
-                class="color-mode d-lg-flex justify-content-center align-items-center"
-              >
-                <i class="color-mode-icon"></i>
-                <span class="color-mode-text">Color mode</span>
-              </div>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saugat Adhikari",
+        "url": "https://asaugat.com.np/",
+        "image": "https://asaugat.com.np/images/myimage.png",
+        "jobTitle": "Software Engineer",
+        "email": "mailto:asaugat04@gmail.com",
+        "telephone": "+977-9814057843",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kathmandu",
+          "addressCountry": "NP"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Mechi Multiple Campus"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Online Notes Nepal"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/asaugat04/",
+          "https://www.github.com/asaugat04",
+          "https://www.facebook.com/asaugat04",
+          "https://www.instagram.com/asaugat04"
+        ],
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "NestJS",
+          "PostgreSQL",
+          "TypeORM"
+        ]
+      }
+    </script>
+
+  <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="css/unicons.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/unicons.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  </noscript>
+  <script src="https://kit.fontawesome.com/35deec5c2c.js" defer crossorigin="anonymous"></script>
+  <!-- MAIN STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- MENU -->
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="uil uil-user"></i> Saugat</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="mx-auto navbar-nav">
+          <li class="nav-item">
+            <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#project" class="nav-link"><span data-hover="Certifications">Certifications</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+          </li>
+        </ul>
+
+        <div class="ml-lg-auto navbar-nav">
+          <div class="ml-lg-4">
+            <div class="d-lg-flex align-items-center justify-content-center color-mode">
+              <i class="color-mode-icon"></i>
+              <span class="color-mode-text">Color mode</span>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- ABOUT -->
-    <section
-      class="about full-screen d-lg-flex justify-content-center align-items-center"
-      id="about"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-            <div class="about-text">
-              <small class="small-text mt-0 p-0"
-                >Welcome to
-                <span class="mobile-block">my Portfolio Website!</span></small
-              >
-              <h1 class="animated animated-text">
-                <span class="mr-2">Hello, I'm</span>
-                <div class="animated-info mt-0 pt-0">
-                  <span class="animated-item">Saugat&nbsp;Adhikari</span>
-                  <span class="animated-item">Software Engineer</span>
-                  <span class="animated-item">Frontend Engineer</span>
-                </div>
-              </h1>
-
-              <p>
-                Software Engineer with 3+ years of experience building
-                scalable web applications using React, Next.js, and
-                TypeScript. Experienced in designing responsive user
-                interfaces, optimizing application performance, and
-                developing maintainable software for production
-                environments. Comfortable working across the full stack with
-                NestJS, PostgreSQL, and TypeORM, contributing to API
-                development and end-to-end feature delivery.
-              </p>
-
-              <div class="custom-btn-group mt-4">
-                <a
-                  href="./assets/resume.pdf"
-                  download="Saugat resume.pdf"
-                  class="btn mr-lg-2 custom-btn"
-                  ><i class="uil uil-file-alt"></i> Download Resume</a
-                >
-                <a
-                  href="#contact"
-                  class="btn custom-btn custom-btn-bg custom-btn-link"
-                  >Contact Me</a
-                >
+  <!-- ABOUT -->
+  <section class="d-lg-flex align-items-center justify-content-center about full-screen" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex align-items-center col-lg-7 col-md-12 col-12">
+          <div class="about-text">
+            <small class="mt-0 p-0 small-text">Welcome to
+              <span class="mobile-block">my Portfolio Website!</span></small>
+            <h1 class="animated animated-text">
+              <span class="mr-2">Hello, I'm</span>
+              <div class="mt-0 pt-0 animated-info">
+                <span class="animated-item">Saugat&nbsp;Adhikari</span>
+                <span class="animated-item">Software Engineer</span>
               </div>
-            </div>
-          </div>
+            </h1>
 
-          <div class="col-lg-5 col-md-12 col-12">
-            <div class="about-image svg">
-              <img
-                src="images/undraw/undraw_software_engineer_lvl5.svg"
-                class="img-fluid"
-                alt="Software engineer illustration"
-                width="500"
-                height="400"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="project py-5" id="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-11 text-center mx-auto col-12">
-            <div class="col-lg-8 mx-auto">
-              <h2>My Certifications</h2>
-              <br />
-              <br />
-            </div>
-
-            <div class="owl-carousel owl-theme">
-              <div class="item">
-                <div class="certifications-info">
-                  <img
-                    src="images/certifications/project-image01.jpeg"
-                    class="img-fluid pl-5 pr-5"
-                    alt="React.js and GitHub certification"
-                    width="400"
-                    height="300"
-                    loading="lazy"
-                  />
-                  <h3 class="title mt-2">React.js and GitHub</h3>
-                  <p class="description pl-1 pr-1 ml-4" style="width: 93%">
-                    Completed 30 hours workhsop on "React.js and Github"on 2023
-                    hosted by Mechi Multiple campus
-                  </p>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="certifications-info">
-                  <img
-                    src="images/certifications/project-image01.jpeg"
-                    class="img-fluid pl-5 pr-5"
-                    alt="Cyber Security certification"
-                    width="400"
-                    height="300"
-                    loading="lazy"
-                  />
-                  <h3 class="title mt-2">Cyber Security</h3>
-                  <p class="description pl-1 pr-1 ml-4" style="width: 93%">
-                    Completed 33 hours workhsop on "Cyber Security and Ethical
-                    Hacking" on 2022 hosted by Mechi Multiple campus
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="project py-5" id="projects">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-11 text-center mx-auto col-12">
-            <div class="col-lg-8 mx-auto">
-              <h2>Featured Projects</h2>
-              <br />
-              <br />
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 col-12 mb-4">
-            <div class="project-card">
-              <h3 class="project-card-title">Jobscater</h3>
-              <p class="project-card-subtitle">Recruitment Platform</p>
-              <div class="project-tags">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">RTK Query</span>
-                <span class="tech-tag">REST API</span>
-              </div>
-              <ul class="project-checklist">
-                <li>
-                  <i class="fa-solid fa-check"></i> Built responsive
-                  dashboards, authentication flows, and job listing
-                  interfaces
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Developed CV generation
-                  interfaces and AI-assisted recruitment features
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Integrated REST APIs with
-                  reusable state management patterns
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Implemented production
-                  ready recruitment workflows across multiple user roles
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12 mb-4">
-            <div class="project-card">
-              <h3 class="project-card-title">HamroRestro</h3>
-              <p class="project-card-subtitle">
-                Multi-Tenant Restaurant Management System
-              </p>
-              <div class="project-tags">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Tailwind CSS</span>
-              </div>
-              <ul class="project-checklist">
-                <li>
-                  <i class="fa-solid fa-check"></i> Built key frontend
-                  modules for a multi-tenant SaaS supporting isolated
-                  subdomains
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Developed Order
-                  Management, Accounts, and Supplier Management modules
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Integrated business
-                  workflows for orders, accounting, and inventory
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Contributed to a scalable
-                  SaaS architecture supporting tenant-based management
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12 mb-4">
-            <div class="project-card">
-              <h3 class="project-card-title">Online Notes Nepal</h3>
-              <p class="project-card-subtitle">Digital Learning Platform</p>
-              <div class="project-tags">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">NestJS</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-              <ul class="project-checklist">
-                <li>
-                  <i class="fa-solid fa-check"></i> Led frontend development
-                  for the public website and administrative CMS
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Collaborated on backend
-                  development using NestJS and MySQL for CMS functionality
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Improved SEO and Core Web
-                  Vitals through SSR, metadata automation, and XML sitemaps
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Solved large-scale
-                  dynamic sitemap and mathematical content rendering
-                  challenges
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12 mb-4">
-            <div class="project-card">
-              <h3 class="project-card-title">Vatsalya</h3>
-              <p class="project-card-subtitle">Healthcare Platform</p>
-              <div class="project-tags">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">CMS</span>
-              </div>
-              <ul class="project-checklist">
-                <li>
-                  <i class="fa-solid fa-check"></i> Led frontend development
-                  for an IVF, IUI, and fertility treatment platform
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Built responsive service
-                  pages, doctor profiles, and inquiry forms
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Implemented CMS-driven
-                  content management features
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Improved SEO,
-                  accessibility, and page performance across the platform
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12 mb-4">
-            <div class="project-card">
-              <h3 class="project-card-title">Kheldrishya CMS</h3>
-              <p class="project-card-subtitle">Sports News CMS</p>
-              <div class="project-tags">
-                <span class="tech-tag">React.js</span>
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">NestJS</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">TypeORM</span>
-              </div>
-              <ul class="project-checklist">
-                <li>
-                  <i class="fa-solid fa-check"></i> Built a fully
-                  customizable CMS with drag-and-drop page sections
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Developed the complete
-                  frontend while contributing to NestJS/PostgreSQL backend
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Implemented reusable
-                  content components for non-technical editors
-                </li>
-                <li>
-                  <i class="fa-solid fa-check"></i> Collaborated on API
-                  design and CMS architecture for scalable content management
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section
-      class="resume py-5 d-lg-flex justify-content-center align-items-center"
-      id="resume"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <h2 class="mb-4">Experiences</h2>
-
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2025</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Software Engineer</span><br /><small
-                      >Online Notes Nepal</small
-                    >
-                  </h3>
-                  <p>
-                    Led development of the web platform, delivering
-                    production-ready features across the public website,
-                    student dashboard, and admin CMS with Next.js, React, and
-                    TypeScript. Built a customizable CMS with drag-and-drop
-                    page management, contributed to backend using NestJS,
-                    PostgreSQL/MySQL, and TypeORM, and improved SEO and Core
-                    Web Vitals through SSR and metadata automation.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2024</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Frontend Engineer</span><br /><small
-                      >Dome Infosys</small
-                    >
-                  </h3>
-                  <p>
-                    Delivered production-ready web applications across
-                    recruitment, healthcare, CMS, and SaaS platforms using
-                    React, Next.js, and TypeScript. Built responsive,
-                    reusable UIs, admin dashboards, and authentication flows,
-                    integrating REST APIs and scalable client-side state
-                    management for complex business workflows.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Frontend Developer and Instructor</span><br /><small
-                      >Smart Computer</small
-                    >
-                  </h3>
-                  <p>
-                    Modernized the organization's website using React and
-                    Tailwind CSS. Prepared lesson plans and delivered
-                    interactive coding classes on C, C++, and JavaScript
-                    fundamentals, teaching batches of 10–20 students with
-                    hands-on sessions.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Programming Instructor</span><br /><small
-                      >Center for Information Technology (CIT)</small
-                    >
-                  </h3>
-                  <p>
-                    Taught C, C++, and JavaScript with emphasis on
-                    problem-solving and object-oriented programming.
-                    Designed coding exercises, assignments, and projects
-                    while evaluating student progress through practical
-                    assessments.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12">
-            <h2 class="mb-4 mobile-mt-2">Education</h2>
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2019</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Higher Secondary Education (+2 Science)</span
-                    ><small>Laxmi Secondary School</small>
-                  </h3>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2024</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span
-                      >Bachelor of Science in Computer Science and
-                      Information Technology (BSc. CSIT)</span
-                    ><br /><small>Mechi Multiple Campus</small>
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="Skills-wrapper">
-              <h2 class="mb-4 mobile-mt-2">Skills</h2>
-              <div class="container">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="skill-items">
-                      <div
-                        class="timeline-yr mt-2"
-                        style="width: 10px; height: 10px"
-                      ></div>
-                      <div class="timeline-info ml-3 mb-2">
-                        <h5>
-                          <span
-                            >Languages:<small
-                              style="font-size: small; font-weight: lighter"
-                            >
-                              TypeScript, JavaScript (ES6+), Python, C,
-                              C++.</small
-                            ></span
-                          >
-                        </h5>
-                      </div>
-                    </div>
-
-                    <div class="skill-items">
-                      <div
-                        class="timeline-yr mt-2"
-                        style="width: 10px; height: 10px"
-                      ></div>
-                      <div class="timeline-info ml-3 mb-2">
-                        <h5>
-                          <span
-                            >Frontend:<small
-                              style="font-size: small; font-weight: lighter"
-                            >
-                              React, Next.js, React Native, Redux (RTK
-                              Query), TanStack Query, Tailwind CSS, HTML5,
-                              CSS3, React Hook Form, Zod.</small
-                            ></span
-                          >
-                        </h5>
-                      </div>
-                    </div>
-
-                    <div class="skill-items">
-                      <div
-                        class="timeline-yr mt-2"
-                        style="width: 10px; height: 10px"
-                      ></div>
-                      <div class="timeline-info ml-3 mb-2">
-                        <h5>
-                          <span
-                            >Backend &amp; Database:<small
-                              style="font-size: small; font-weight: lighter"
-                            >
-                              NestJS, Express.js, Node.js, TypeORM,
-                              PostgreSQL.</small
-                            ></span
-                          >
-                        </h5>
-                      </div>
-                    </div>
-
-                    <div class="skill-items">
-                      <div
-                        class="timeline-yr mt-2"
-                        style="width: 10px; height: 10px"
-                      ></div>
-                      <div class="timeline-info ml-3 mb-2">
-                        <h5>
-                          <span
-                            >DevOps / Tools:<small
-                              style="font-size: small; font-weight: lighter"
-                            >
-                              Docker, Git, Turborepo, Figma.</small
-                            ></span
-                          >
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 mr-lg-5 col-12">
-            <h2 class="mb-4">Contact Me</h2>
-            <div
-              class="contact-info d-flex justify-content-between py-4 px-lg-5 flex-column"
-            >
-              <div class="contact-card-top d-flex justify-content-between">
-                <div class="d-flex">
-                  <img
-                    class="rounded float-start"
-                    src="./images/myimage.png"
-                    height="100"
-                    alt="image of saugat adhikari"
-                    loading="lazy"
-                  />
-                  <h2 class="ml-3 text-white" style="width: min-content">
-                    Saugat Adhikari
-                  </h2>
-                </div>
-                <div class="social-links">
-                  <a
-                    tabindex="-1"
-                    href="https://www.facebook.com/asaugat04"
-                    class="fa-brands fa-facebook mx-1"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="Facebook"
-                  ></a>
-                  <a
-                    tabindex="-1"
-                    href="https://www.instagram.com/asaugat04"
-                    class="fa-brands fa-instagram mx-1"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="Instagram"
-                  ></a>
-                  <a
-                    tabindex="-1"
-                    href="https://www.github.com/asaugat04"
-                    class="fa-brands fa-github mx-1"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="Github"
-                  ></a>
-                  <a
-                    tabindex="-1"
-                    href="https://www.linkedin.com/in/asaugat04/"
-                    class="fa-brands fa-linkedin mx-1"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    title="LinkedIn"
-                  ></a>
-                </div>
-              </div>
-              <hr
-                class="border rounded border-dark border-2 opacity-50"
-                style="width: 100%"
-              />
-              <div class="contact-info-item mt-5">
-                <div class="d-flex align-items-start">
-                  <i
-                    class="fa-regular fa-envelope"
-                    style="height: 2em; font-size: 2.9em; color: #ad8b20"
-                  ></i>
-                  <div class="ml-3">
-                    <h5 class="m-0 text-white">Email</h5>
-                    <p class="m-0">
-                      <a href="mailto:asaugat04@gmail.com"
-                        >asaugat04@gmail.com</a
-                      >
-                    </p>
-                  </div>
-                </div>
-
-                <div class="d-flex align-items-start">
-                  <i
-                    class="fa-solid fa-phone"
-                    style="height: 2em; font-size: 2.9em; color: #ad8b20"
-                  ></i>
-                  <div class="ml-3">
-                    <h5 class="m-0 text-white">Phone</h5>
-                    <p class="m-0">
-                      <a href="tel:+9779814057843">+977-9814057843</a>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="d-flex align-items-start">
-                  <i
-                    class="fa-solid fa-location-dot"
-                    style="height: 2em; font-size: 2.9em; color: #ad8b20"
-                  ></i>
-                  <div class="ml-3">
-                    <h5 class="m-0 text-white">Location</h5>
-                    <p class="m-0">Kathmandu, Nepal</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-12">
-            <div class="contact-form">
-              <h2 class="mb-4">Interested to work together? Let's talk</h2>
-
-              <form id="contactForm">
-                <div class="row">
-                  <div class="col-lg-6 col-12">
-                    <input
-                      required
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      placeholder="Your Name"
-                      id="name"
-                    />
-                  </div>
-
-                  <div class="col-lg-6 col-12">
-                    <input
-                      required
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="Email"
-                      id="email"
-                    />
-                  </div>
-
-                  <div class="col-12">
-                    <textarea
-                      required
-                      name="message"
-                      rows="6"
-                      class="form-control"
-                      id="message"
-                      placeholder="Message"
-                    ></textarea>
-                  </div>
-
-                  <div class="ml-lg-auto col-lg-5 col-12">
-                    <input
-                      type="submit"
-                      class="form-control submit-btn"
-                      value="Send Message"
-                    />
-                  </div>
-                  <span id="submit-msg" class="p-1 rounded"></span>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-12">
-            <p class="copyright-text text-center">
-              Copyright &copy; 2026 Saugat Adhikari . All rights reserved
+            <p>
+              I'm a Software Engineer with 3+ years of experience turning
+              complex problems into fast, accessible web applications
+              using React, Next.js, and TypeScript. I care as much about
+              clean architecture and performance as I do about the pixels
+              on screen, and I'm equally comfortable across the stack with
+              NestJS, PostgreSQL, and TypeORM, shipping features end to end
+              rather than just the frontend half of them.
             </p>
+
+            <div class="custom-btn-group mt-4">
+              <a href="./assets/resume.pdf" download="Saugat resume.pdf" class="mr-lg-2 btn custom-btn"><i
+                  class="uil uil-file-alt"></i> Download Resume</a>
+              <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Contact Me</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="about-image svg">
+            <img src="images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid"
+              alt="Software engineer illustration" width="500" height="400" loading="lazy" />
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5CZP95N89G"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <!-- PROJECTS -->
+  <section class="py-5 project" id="project">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto text-center col-lg-11 col-12">
+          <div class="mx-auto col-lg-8">
+            <h2>My Certifications</h2>
+            <br />
+            <br />
+          </div>
 
-      gtag("config", "G-5CZP95N89G");
-    </script>
-    <!-- Google tag (gtag.js) end -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-      contactFormMsgArea = document.getElementById("submit-msg");
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="certifications-info">
+                <img src="images/certifications/project-image02.jpg" class="pr-5 pl-5 img-fluid"
+                  alt="React.js and GitHub certification" width="400" height="300" loading="lazy" />
+                <h3 class="mt-2 title">React.js and GitHub</h3>
+                <p class="ml-4 pr-1 pl-1 description" style="width: 93%">
+                  30-hour workshop on React.js and GitHub, hosted by Mechi
+                  Multiple Campus in 2023.
+                </p>
+              </div>
+            </div>
 
-      function displayinContactFormMsgArea(msg, classname) {
-        contactFormMsgArea.style.display = "inline";
-        contactFormMsgArea.classList.add(classname);
-        contactFormMsgArea.innerHTML = msg;
-        setTimeout(() => {
-          contactFormMsgArea.style.display = "none";
-        }, 1000);
-      }
+            <div class="item">
+              <div class="certifications-info">
+                <img src="images/certifications/project-image01.jpeg" class="pr-5 pl-5 img-fluid"
+                  alt="Cyber Security certification" width="400" height="300" loading="lazy" />
+                <h3 class="mt-2 title">Cyber Security</h3>
+                <p class="ml-4 pr-1 pl-1 description" style="width: 93%">
+                  33-hour workshop on Cyber Security and Ethical Hacking,
+                  hosted by Mechi Multiple Campus in 2022.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      let form = document.getElementById("contactForm");
-      form.addEventListener("submit", submitform);
-      function submitform(e) {
-        e.preventDefault();
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
+  <!-- PROJECTS -->
+  <section class="py-5 project" id="projects">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto text-center col-lg-11 col-12">
+          <div class="mx-auto col-lg-8">
+            <h2>Featured Projects</h2>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
 
-        //saving data to apispreadsheets
-        fetch("https://api.apispreadsheets.com/data/4NADYyodriY6Z4Lh/", {
-          method: "POST",
-          body: JSON.stringify({
-            data: { Name: name, Email: email, Message: message },
-          }),
-        }).then((res) => {
-          if (res.status === 201) {
-            displayinContactFormMsgArea(
-              "✔️ Message sent successfully",
-              "bg-success"
-            );
-            //clearing the form
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-          } else {
-            displayinContactFormMsgArea(
-              "❌ Error occoured! Try again",
-              "bg-danger"
-            );
-          }
-        });
+      <div class="row">
+        <div class="mb-4 col-lg-6 col-12">
+          <div class="project-card">
+            <h3 class="project-card-title">Jobscater</h3>
+            <p class="project-card-subtitle">Recruitment Platform</p>
+            <div class="project-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">RTK Query</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+            <ul class="project-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Built responsive
+                dashboards, authentication flows, and job listing
+                interfaces
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Developed CV generation
+                interfaces and AI-assisted recruitment features
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Integrated REST APIs with
+                reusable state management patterns
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Implemented production
+                ready recruitment workflows across multiple user roles
+              </li>
+            </ul>
+          </div>
+        </div>
 
-        //attempt to send email
-        fetch("https://formsubmit.co/ajax/asaugat04@gmail.com", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-          },
-          body: JSON.stringify({ Name: name, Email: email, Message: message }),
-        });
-      }
-    </script>
-  </body>
+        <div class="mb-4 col-lg-6 col-12">
+          <div class="project-card">
+            <h3 class="project-card-title">HamroRestro</h3>
+            <p class="project-card-subtitle">
+              Multi-Tenant Restaurant Management System
+            </p>
+            <div class="project-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
+            <ul class="project-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Built key frontend
+                modules for a multi-tenant SaaS supporting isolated
+                subdomains
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Developed Order
+                Management, Accounts, and Supplier Management modules
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Integrated business
+                workflows for orders, accounting, and inventory
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Contributed to a scalable
+                SaaS architecture supporting tenant-based management
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-4 col-lg-6 col-12">
+          <div class="project-card">
+            <h3 class="project-card-title">Online Notes Nepal</h3>
+            <p class="project-card-subtitle">Digital Learning Platform</p>
+            <div class="project-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+            <ul class="project-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Led frontend development
+                for the public website and administrative CMS
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Collaborated on backend
+                development using NestJS and MySQL for CMS functionality
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Improved SEO and Core Web
+                Vitals through SSR, metadata automation, and XML sitemaps
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Solved large-scale
+                dynamic sitemap and mathematical content rendering
+                challenges
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-4 col-lg-6 col-12">
+          <div class="project-card">
+            <h3 class="project-card-title">Vatsalya</h3>
+            <p class="project-card-subtitle">Healthcare Platform</p>
+            <div class="project-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">CMS</span>
+            </div>
+            <ul class="project-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Led frontend development
+                for an IVF, IUI, and fertility treatment platform
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Built responsive service
+                pages, doctor profiles, and inquiry forms
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Implemented CMS-driven
+                content management features
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Improved SEO,
+                accessibility, and page performance across the platform
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-4 col-lg-6 col-12">
+          <div class="project-card">
+            <h3 class="project-card-title">Kheldrishya CMS</h3>
+            <p class="project-card-subtitle">Sports News CMS</p>
+            <div class="project-tags">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">TypeORM</span>
+            </div>
+            <ul class="project-checklist">
+              <li>
+                <i class="fa-solid fa-check"></i> Built a fully
+                customizable CMS with drag-and-drop page sections
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Developed the complete
+                frontend while contributing to NestJS/PostgreSQL backend
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Implemented reusable
+                content components for non-technical editors
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Collaborated on API
+                design and CMS architecture for scalable content management
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="d-lg-flex align-items-center justify-content-center py-5 resume" id="resume">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12">
+          <h2 class="mb-4">Experience</h2>
+
+          <div class="timeline">
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2025</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Software Engineer</span><br /><small>Online Notes Nepal</small>
+                </h3>
+                <p>
+                  Led development of the web platform, delivering
+                  production-ready features across the public website,
+                  student dashboard, and admin CMS with Next.js, React, and
+                  TypeScript. Built a customizable CMS with drag-and-drop
+                  page management, contributed to backend using NestJS,
+                  PostgreSQL/MySQL, and TypeORM, and improved SEO and Core
+                  Web Vitals through SSR and metadata automation.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2024</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Frontend Engineer</span><br /><small>Dome Infosys</small>
+                </h3>
+                <p>
+                  Delivered production-ready web applications across
+                  recruitment, healthcare, CMS, and SaaS platforms using
+                  React, Next.js, and TypeScript. Built responsive,
+                  reusable UIs, admin dashboards, and authentication flows,
+                  integrating REST APIs and scalable client-side state
+                  management for complex business workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2022</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Frontend Developer and Instructor</span><br /><small>Smart Computer</small>
+                </h3>
+                <p>
+                  Modernized the organization's website using React and
+                  Tailwind CSS. Prepared lesson plans and delivered
+                  interactive coding classes on C, C++, and JavaScript
+                  fundamentals, teaching batches of 10–20 students with
+                  hands-on sessions.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2022</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Programming Instructor</span><br /><small>Center for Information Technology (CIT)</small>
+                </h3>
+                <p>
+                  Taught C, C++, and JavaScript with emphasis on
+                  problem-solving and object-oriented programming.
+                  Designed coding exercises, assignments, and projects
+                  while evaluating student progress through practical
+                  assessments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <h2 class="mobile-mt-2 mb-4">Education</h2>
+          <div class="timeline">
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2019</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Higher Secondary Education (+2 Science)</span><small>Laxmi Secondary School</small>
+                </h3>
+              </div>
+            </div>
+
+            <div class="timeline-wrapper">
+              <div class="timeline-yr">
+                <span>2024</span>
+              </div>
+              <div class="timeline-info">
+                <h3>
+                  <span>Bachelor of Science in Computer Science and
+                    Information Technology (BSc. CSIT)</span><br /><small>Mechi Multiple Campus</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="Skills-wrapper">
+            <h2 class="mobile-mt-2 mb-4">Skills</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="skill-items">
+                    <div class="mt-2 timeline-yr" style="width: 10px; height: 10px"></div>
+                    <div class="mb-2 ml-3 timeline-info">
+                      <h5>
+                        <span>Languages:<small style="font-size: small; font-weight: lighter">
+                            TypeScript, JavaScript (ES6+), Python, C,
+                            C++.</small></span>
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class="skill-items">
+                    <div class="mt-2 timeline-yr" style="width: 10px; height: 10px"></div>
+                    <div class="mb-2 ml-3 timeline-info">
+                      <h5>
+                        <span>Frontend:<small style="font-size: small; font-weight: lighter">
+                            React, Next.js, React Native, Redux (RTK
+                            Query), TanStack Query, Tailwind CSS, HTML5,
+                            CSS3, React Hook Form, Zod.</small></span>
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class="skill-items">
+                    <div class="mt-2 timeline-yr" style="width: 10px; height: 10px"></div>
+                    <div class="mb-2 ml-3 timeline-info">
+                      <h5>
+                        <span>Backend &amp; Database:<small style="font-size: small; font-weight: lighter">
+                            NestJS, Express.js, Node.js, TypeORM,
+                            PostgreSQL.</small></span>
+                      </h5>
+                    </div>
+                  </div>
+
+                  <div class="skill-items">
+                    <div class="mt-2 timeline-yr" style="width: 10px; height: 10px"></div>
+                    <div class="mb-2 ml-3 timeline-info">
+                      <h5>
+                        <span>DevOps / Tools:<small style="font-size: small; font-weight: lighter">
+                            Docker, Git, Turborepo, Figma.</small></span>
+                      </h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="py-5 contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="mr-lg-5 col-lg-5 col-12">
+          <h2 class="mb-4">Contact Me</h2>
+          <div class="d-flex flex-column justify-content-between px-lg-5 py-4 contact-info">
+            <div class="contact-card-top d-flex justify-content-between">
+              <div class="d-flex">
+                <img class="float-start rounded" src="./images/myimage.png" height="100"
+                  alt="Saugat Adhikari, Software Engineer" loading="lazy" />
+                <h2 class="ml-3 text-white" style="width: min-content">
+                  Saugat Adhikari
+                </h2>
+              </div>
+              <div class="social-links">
+                <a tabindex="-1" href="https://www.facebook.com/asaugat04" class="mx-1 fa-brands fa-facebook"
+                  data-toggle="tooltip" data-placement="bottom" title="Facebook"></a>
+                <a tabindex="-1" href="https://www.instagram.com/asaugat04" class="mx-1 fa-brands fa-instagram"
+                  data-toggle="tooltip" data-placement="bottom" title="Instagram"></a>
+                <a tabindex="-1" href="https://www.github.com/asaugat04" class="mx-1 fa-brands fa-github"
+                  data-toggle="tooltip" data-placement="bottom" title="Github"></a>
+                <a tabindex="-1" href="https://www.linkedin.com/in/asaugat04/" class="mx-1 fa-brands fa-linkedin"
+                  data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></a>
+              </div>
+            </div>
+            <hr class="opacity-50 border border-2 border-dark rounded" style="width: 100%" />
+            <div class="mt-5 contact-info-item">
+              <div class="d-flex align-items-start">
+                <i class="fa-regular fa-envelope" style="height: 2em; font-size: 2.9em; color: #ad8b20"></i>
+                <div class="ml-3">
+                  <h5 class="m-0 text-white">Email</h5>
+                  <p class="m-0">
+                    <a href="mailto:asaugat04@gmail.com">asaugat04@gmail.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start">
+                <i class="fa-solid fa-phone" style="height: 2em; font-size: 2.9em; color: #ad8b20"></i>
+                <div class="ml-3">
+                  <h5 class="m-0 text-white">Phone</h5>
+                  <p class="m-0">
+                    <a href="tel:+9779814057843">+977-9814057843</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start">
+                <i class="fa-solid fa-location-dot" style="height: 2em; font-size: 2.9em; color: #ad8b20"></i>
+                <div class="ml-3">
+                  <h5 class="m-0 text-white">Location</h5>
+                  <p class="m-0">Kathmandu, Nepal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-12">
+          <div class="contact-form">
+            <h2 class="mb-4">Have a project in mind? Let's talk.</h2>
+
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <input required type="text" class="form-control" name="name" placeholder="Your Name" id="name" />
+                </div>
+
+                <div class="col-lg-6 col-12">
+                  <input required type="email" class="form-control" name="email" placeholder="Email" id="email" />
+                </div>
+
+                <div class="col-12">
+                  <textarea required name="message" rows="6" class="form-control" id="message"
+                    placeholder="Message"></textarea>
+                </div>
+
+                <div class="ml-lg-auto col-lg-5 col-12">
+                  <input type="submit" class="form-control submit-btn" value="Send Message" />
+                </div>
+                <span id="submit-msg" class="p-1 rounded"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-12">
+          <p class="text-center copyright-text">
+            Copyright &copy; 2026 Saugat Adhikari. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CZP95N89G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5CZP95N89G");
+  </script>
+  <!-- Google tag (gtag.js) end -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Headroom.js"></script>
+  <script src="js/jQuery.headroom.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/custom.js"></script>
+  <script>
+    contactFormMsgArea = document.getElementById("submit-msg");
+
+    function displayinContactFormMsgArea(msg, classname) {
+      contactFormMsgArea.style.display = "inline";
+      contactFormMsgArea.classList.add(classname);
+      contactFormMsgArea.innerHTML = msg;
+      setTimeout(() => {
+        contactFormMsgArea.style.display = "none";
+      }, 1000);
+    }
+
+    let form = document.getElementById("contactForm");
+    form.addEventListener("submit", submitform);
+    function submitform(e) {
+      e.preventDefault();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      //saving data to apispreadsheets
+      fetch("https://api.apispreadsheets.com/data/4NADYyodriY6Z4Lh/", {
+        method: "POST",
+        body: JSON.stringify({
+          data: { Name: name, Email: email, Message: message },
+        }),
+      }).then((res) => {
+        if (res.status === 201) {
+          displayinContactFormMsgArea(
+            "✔️ Message sent successfully",
+            "bg-success"
+          );
+          //clearing the form
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+        } else {
+          displayinContactFormMsgArea(
+            "❌ Something went wrong. Please try again.",
+            "bg-danger"
+          );
+        }
+      });
+
+      //attempt to send email
+      fetch("https://formsubmit.co/ajax/asaugat04@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({ Name: name, Email: email, Message: message }),
+      });
+    }
+  </script>
+</body>
+
 </html>
