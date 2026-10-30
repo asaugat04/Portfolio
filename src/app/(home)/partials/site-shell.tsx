@@ -9,7 +9,8 @@ import {
 import { cn } from "@/lib/utils";
 import { homeNavigation, routes } from "@/constants/routes";
 import { useTheme } from "next-themes";
-import { mavenPro, unicons } from "@/constants/fonts";
+import { Moon, Sun, UserRound } from "lucide-react";
+import { mavenPro } from "@/constants/fonts";
 
 export function SiteShell({
   children,
@@ -73,10 +74,7 @@ export function SiteShell({
     requestAnimationFrame(animate);
   }
   return (
-    <div
-      className={cn("portfolio", mavenPro.variable, unicons.variable)}
-      onClick={navigate}
-    >
+    <div className={cn("portfolio", mavenPro.variable)} onClick={navigate}>
       <nav
         ref={navRef}
         className={cn(
@@ -88,7 +86,7 @@ export function SiteShell({
       >
         <div className="portfolio-container flex flex-wrap items-center justify-between">
           <a href={routes.home} className="site-brand">
-            <i className="uil uil-user" aria-hidden="true" /> Saugat
+            <UserRound className="site-brand-icon" aria-hidden="true" /> Saugat
           </a>
           <button
             type="button"
@@ -131,7 +129,10 @@ export function SiteShell({
                   aria-label="Toggle color mode"
                   aria-pressed={mounted ? resolvedTheme === "dark" : undefined}
                 >
-                  <i className="color-mode-icon" aria-hidden="true" />
+                  <span className="color-mode-icon" aria-hidden="true">
+                    <Moon className="theme-moon" />
+                    <Sun className="theme-sun" />
+                  </span>
                   <span className="color-mode-text">Color mode</span>
                 </button>
               </div>

@@ -1,3 +1,4 @@
+import { FileText } from "lucide-react";
 import { PortfolioImage } from "@/components/shared/portfolio-image";
 import { routes } from "@/constants/routes";
 import type { ContentData } from "@/schemas/content";
@@ -46,7 +47,10 @@ export function About({
                     download={resume.filename}
                     className="custom-btn min-[992px]:mr-2"
                   >
-                    <i className="uil uil-file-alt" aria-hidden="true" />{" "}
+                    <FileText
+                      className="mr-1 inline-block size-4 align-[-0.125em]"
+                      aria-hidden="true"
+                    />{" "}
                     Download Resume
                   </a>
                 )}{" "}

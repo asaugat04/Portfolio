@@ -1,4 +1,5 @@
 "use client";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PortfolioImage } from "@/components/shared/portfolio-image";
 import { useState, type TouchEvent } from "react";
 import type { ContentEntry } from "@/schemas/content";
@@ -81,14 +82,14 @@ export function Certifications({
                       aria-label="Previous certification"
                       onClick={() => move(-1)}
                     >
-                      &#xe833;
+                      <ChevronLeft size={100} aria-hidden="true" />
                     </button>
                     <button
                       className="carousel-arrow -right-[15px] min-[992px]:-right-[45px]"
                       aria-label="Next certification"
                       onClick={() => move(1)}
                     >
-                      &#xe836;
+                      <ChevronRight size={100} aria-hidden="true" />
                     </button>
                   </div>
                   <div className="carousel-dots">

@@ -178,8 +178,12 @@
       white-space: nowrap;
       color: rgba(0, 0, 0, 0.9);
     }
-    .site-brand .uil {
-      font-size: 40px;
+    .site-brand-icon {
+      display: inline-block;
+      width: 56px;
+      height: 60px;
+      padding: 10px 8px;
+      vertical-align: middle;
     }
     .nav-link {
       display: block;
@@ -211,13 +215,18 @@
     .color-mode-icon {
       position: relative;
       right: 6px;
+      display: inline-flex;
+      align-items: center;
+      width: 30px;
+      height: 45px;
+      vertical-align: middle;
     }
-    .color-mode-icon::after {
-      font-family: var(--font-unicons);
-      content: "\ea9f";
-      font-size: 30px;
-      font-weight: 300;
-      font-style: normal;
+    .color-mode-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+    .theme-sun {
+      display: none;
     }
     .nav-toggle {
       border: 0;
@@ -339,9 +348,8 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      font-family: var(--font-unicons);
-      font-size: 100px;
-      line-height: normal;
+      width: 100px;
+      height: 100px;
     }
     .carousel-arrow:hover {
       color: #ffc200;
@@ -452,32 +460,12 @@
       font-weight: 400;
       display: block;
     }
-    .uil {
-      font-family: var(--font-unicons);
-      font-style: normal;
-      font-weight: 400;
-      display: inline-block;
-    }
-    .uil::before {
-      display: inline-block;
-      width: 1em;
-      margin-inline: 0.2em;
-      text-align: center;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1em;
-      -webkit-font-smoothing: antialiased;
-    }
-    .uil-user::before {
-      content: "\ebb2";
-    }
-    .uil-file-alt::before {
-      content: "\e9af";
-    }
     html[data-portfolio-theme="dark"] & {
-      .color-mode-icon::after {
-        content: "\eb65";
-        color: white;
+      .theme-moon {
+        display: none;
+      }
+      .theme-sun {
+        display: block;
       }
       .site-menu,
       .nav-toggle {
