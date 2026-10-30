@@ -3,6 +3,7 @@ import { z } from "zod";
 
 const required = z.string().trim().min(1);
 const schema = z.object({
+  VERCEL: z.string().optional(),
   DATABASE_URL: z.url(),
   BETTER_AUTH_SECRET: z.string().min(32),
   CLOUDINARY_CLOUD_NAME: required,

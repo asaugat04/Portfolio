@@ -70,7 +70,7 @@ export function ContactForm() {
           <div className="portfolio-column min-[992px]:ml-auto min-[992px]:w-5/12">
             <input
               type="submit"
-              className="contact-input submit-btn disabled:opacity-60"
+              className="contact-input submit-btn disabled:cursor-wait"
               disabled={pending}
               value={pending ? "Sending…" : "Send Message"}
             />
