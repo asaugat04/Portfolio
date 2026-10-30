@@ -59,3 +59,5 @@
     cursor: pointer;
   }
 }
+
+@custom-variant portfolio-dark (&:where([data-portfolio-theme="dark"] *));

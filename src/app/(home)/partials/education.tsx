@@ -8,7 +8,7 @@ export function Education({
   if (!entries.length) return null;
   return (
     <>
-      <h2 className="mobile-mt-2 mb-6">Education</h2>
+      <h2 className="mb-6 max-[992px]:mt-[2em]">Education</h2>
       <div>
         {entries.map((entry) => (
           <TimelineItem key={entry.id} data={entry.data} />

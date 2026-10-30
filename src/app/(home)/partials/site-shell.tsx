@@ -74,23 +74,37 @@ export function SiteShell({
     requestAnimationFrame(animate);
   }
   return (
-    <div className={cn("portfolio", mavenPro.variable)} onClick={navigate}>
+    <div
+      className={cn(
+        "portfolio [&_a:hover]:text-(--portfolio-accent-text)",
+        mavenPro.variable,
+      )}
+      onClick={navigate}
+    >
       <nav
         ref={navRef}
         className={cn(
-          "site-nav",
-          scroll.hidden && !expanded && "hidden-nav",
-          scroll.scrolled && "scrolled",
+          "fixed inset-x-0 top-0 z-50 px-4 py-2 transition-transform duration-200 ease-linear will-change-transform",
+          scroll.hidden && !expanded && "-translate-y-[150%]",
+          scroll.scrolled &&
+            "border-b border-[#f0f0f0] bg-white py-0 portfolio-dark:border-[#1f1f1f] portfolio-dark:bg-[#0c0c0d]",
         )}
         aria-label="Main navigation"
       >
-        <div className="portfolio-container flex flex-wrap items-center justify-between">
-          <a href={routes.home} className="site-brand">
-            <UserRound className="site-brand-icon" aria-hidden="true" /> Saugat
+        <div className="mx-auto flex w-full flex-wrap items-center justify-between px-[15px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px]">
+          <a
+            href={routes.home}
+            className="mr-4 inline-block py-[5px] text-[20px] leading-[inherit] font-bold whitespace-nowrap text-[rgba(0,0,0,0.9)] portfolio-dark:text-white"
+          >
+            <UserRound
+              className="inline-block h-[60px] w-14 px-2 py-[10px] align-middle"
+              aria-hidden="true"
+            />{" "}
+            Saugat
           </a>
           <button
             type="button"
-            className="nav-toggle min-[576px]:hidden"
+            className="group/toggle mr-[10px] size-8 border-0 border-current p-0 leading-8 max-[581px]:bg-white min-[576px]:hidden portfolio-dark:bg-[#0c0c0d] [&_span]:relative [&_span]:my-[5px] [&_span]:block [&_span]:h-[2px] [&_span]:w-full [&_span]:bg-[#212121] [&_span]:transition-all [&_span]:duration-400 [&_span]:ease-[ease] portfolio-dark:[&_span]:bg-[rgba(255,255,255,0.8)] [&[aria-expanded=true]_span:first-child]:top-[6px] [&[aria-expanded=true]_span:first-child]:rotate-45 [&[aria-expanded=true]_span:last-child]:bottom-px [&[aria-expanded=true]_span:last-child]:-rotate-45 [&[aria-expanded=true]_span:nth-child(2)]:hidden"
             aria-controls="site-menu"
             aria-expanded={expanded}
             aria-label="Toggle navigation"
@@ -102,7 +116,7 @@ export function SiteShell({
           </button>
           <div
             id="site-menu"
-            className={`site-menu w-full min-[576px]:flex min-[576px]:w-auto min-[576px]:grow min-[576px]:items-center ${expanded ? "block" : "hidden"}`}
+            className={`w-full max-[768px]:bg-white max-[768px]:pb-5 max-[768px]:text-center min-[576px]:flex min-[576px]:w-auto min-[576px]:grow min-[576px]:items-center portfolio-dark:bg-[#0c0c0d] ${expanded ? "block" : "hidden"}`}
           >
             <ul className="mx-auto min-[576px]:flex">
               {navigation.map(({ href, label }) => (
@@ -110,10 +124,15 @@ export function SiteShell({
                   <a
                     href={href}
                     aria-label={label}
-                    className="nav-link"
+                    className="group/nav block overflow-hidden px-5 py-0 text-[16px] font-bold text-[rgba(0,0,0,0.6)] max-[768px]:py-[3px] portfolio-dark:text-[rgba(255,255,255,0.8)]"
                     onClick={() => setExpanded(false)}
                   >
-                    <span data-hover={label}>{label}</span>
+                    <span
+                      className="relative inline-block transition-transform duration-300 ease-[ease] group-hover/nav:-translate-y-full group-focus/nav:-translate-y-full before:absolute before:top-full before:transform-[translateZ(0)] before:content-[attr(data-hover)]"
+                      data-hover={label}
+                    >
+                      {label}
+                    </span>
                   </a>
                 </li>
               ))}
@@ -122,18 +141,23 @@ export function SiteShell({
               <div className="min-[992px]:ml-6">
                 <button
                   type="button"
-                  className="color-mode mx-auto items-center justify-center min-[992px]:flex"
+                  className="mx-auto cursor-pointer items-center justify-center font-bold min-[992px]:flex portfolio-dark:text-white"
                   onClick={() =>
                     setTheme(resolvedTheme === "dark" ? "light" : "dark")
                   }
                   aria-label="Toggle color mode"
                   aria-pressed={mounted ? resolvedTheme === "dark" : undefined}
                 >
-                  <span className="color-mode-icon" aria-hidden="true">
-                    <Moon className="theme-moon" />
-                    <Sun className="theme-sun" />
+                  <span
+                    className="relative right-[6px] inline-flex h-[45px] w-[30px] items-center align-middle [&_svg]:size-[30px]"
+                    aria-hidden="true"
+                  >
+                    <Moon className="portfolio-dark:hidden" />
+                    <Sun className="hidden portfolio-dark:block" />
                   </span>
-                  <span className="color-mode-text">Color mode</span>
+                  <span className="max-[992px]:hidden max-[581px]:block">
+                    Color mode
+                  </span>
                 </button>
               </div>
             </div>

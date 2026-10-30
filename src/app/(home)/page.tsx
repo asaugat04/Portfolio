@@ -81,12 +81,12 @@ export default async function HomePage() {
             className="items-center justify-center py-12 min-[992px]:flex"
             id="resume"
           >
-            <div className="portfolio-container">
-              <div className="portfolio-row">
-                <div className="portfolio-column min-[992px]:w-1/2">
+            <div className="mx-auto w-full px-[15px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px]">
+              <div className="-mx-[15px] flex flex-wrap">
+                <div className="relative w-full px-[15px] min-[992px]:w-1/2">
                   <Experience entries={content.experience} />
                 </div>
-                <div className="portfolio-column min-[992px]:w-1/2">
+                <div className="relative w-full px-[15px] min-[992px]:w-1/2">
                   <Education entries={content.education} />
                   <Skills entries={content.skills} />
                 </div>
@@ -97,10 +97,10 @@ export default async function HomePage() {
         <Contact details={contact} socials={content["social-links"]} />
       </main>
       <footer className="py-12">
-        <div className="portfolio-container">
-          <div className="portfolio-row">
-            <div className="portfolio-column">
-              <p className="copyright-text text-center">
+        <div className="mx-auto w-full px-[15px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px]">
+          <div className="-mx-[15px] flex flex-wrap">
+            <div className="relative w-full px-[15px]">
+              <p className="block text-center text-[16px] font-normal">
                 Copyright © 2026 {contact?.name ?? site.name}. All rights
                 reserved.
               </p>

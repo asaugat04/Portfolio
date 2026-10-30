@@ -15,13 +15,13 @@ export function Contact({
 }) {
   return (
     <section className="py-12" id="contact">
-      <div className="portfolio-container">
-        <div className="portfolio-row">
-          <div className="portfolio-column min-[992px]:mr-12 min-[992px]:w-5/12">
+      <div className="mx-auto w-full px-[15px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px]">
+        <div className="-mx-[15px] flex flex-wrap">
+          <div className="relative w-full px-[15px] min-[992px]:mr-12 min-[992px]:w-5/12">
             {details && (
               <>
                 <h2 className="mb-6">Contact Me</h2>
-                <div className="contact-info flex flex-col justify-between py-6 min-[992px]:px-12">
+                <div className="relative bottom-2 flex flex-col justify-between rounded-b-[3px] bg-[#474559] py-6 max-[992px]:px-8 min-[992px]:px-12 [&_a]:text-[#f7f3f3] [&_a:hover]:text-[#ffc200]! [&_p]:text-[#f7f3f3] portfolio-dark:[&_p]:text-[#d2d2d2]">
                   <div className="flex justify-between">
                     <div className="flex">
                       <PortfolioImage
@@ -35,7 +35,7 @@ export function Contact({
                       />
                       <h2 className="ml-4 w-min text-white">{details.name}</h2>
                     </div>
-                    <div className="social-links">
+                    <div className="flex h-min text-[larger] max-[581px]:h-auto max-[581px]:flex-col max-[581px]:items-start max-[581px]:justify-evenly [&_a]:inline-flex [&_a]:min-h-6 [&_a]:min-w-6 [&_a]:items-center [&_a]:leading-none [&_svg]:h-[1em] [&_svg]:w-auto">
                       {socials.map(({ id, data }) => (
                         <a
                           key={id}
@@ -89,7 +89,7 @@ export function Contact({
               </>
             )}
           </div>
-          <div className="portfolio-column min-[992px]:w-1/2">
+          <div className="relative w-full px-[15px] min-[992px]:w-1/2">
             <ContactForm />
           </div>
         </div>

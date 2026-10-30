@@ -24,9 +24,9 @@ export function Certifications({
   }
   return (
     <section className="py-12" id="project">
-      <div className="portfolio-container">
-        <div className="portfolio-row">
-          <div className="portfolio-column mx-auto text-center min-[992px]:w-11/12">
+      <div className="mx-auto w-full px-[15px] min-[576px]:max-w-[540px] min-[768px]:max-w-[720px] min-[992px]:max-w-[960px] min-[1200px]:max-w-[1140px]">
+        <div className="-mx-[15px] flex flex-wrap">
+          <div className="relative mx-auto w-full px-[15px] text-center min-[992px]:w-11/12">
             <div className="mx-auto min-[992px]:w-8/12">
               <h2>My Certifications</h2>
               <br />
@@ -78,23 +78,23 @@ export function Certifications({
               </div>
               {entries.length > 1 && (
                 <>
-                  <div className="carousel-navigation">
+                  <div className="mt-[10px] h-6 max-[581px]:hidden">
                     <button
-                      className="carousel-arrow -left-[15px] min-[992px]:-left-[45px]"
+                      className="absolute top-1/2 -left-[15px] size-[100px] -translate-y-1/2 hover:text-[#ffc200] min-[992px]:-left-[45px] portfolio-dark:text-white portfolio-dark:hover:text-white"
                       aria-label="Previous certification"
                       onClick={() => move(-1)}
                     >
                       <ChevronLeft size={100} aria-hidden="true" />
                     </button>
                     <button
-                      className="carousel-arrow -right-[15px] min-[992px]:-right-[45px]"
+                      className="absolute top-1/2 -right-[15px] size-[100px] -translate-y-1/2 hover:text-[#ffc200] min-[992px]:-right-[45px] portfolio-dark:text-white portfolio-dark:hover:text-white"
                       aria-label="Next certification"
                       onClick={() => move(1)}
                     >
                       <ChevronRight size={100} aria-hidden="true" />
                     </button>
                   </div>
-                  <div className="carousel-dots">
+                  <div className="h-6 text-center [&_button]:inline-block [&_button]:size-6 [&_button]:p-0 [&_button:hover_span]:bg-[#5b5b5b] [&_button[aria-current=true]_span]:bg-[#5b5b5b] [&_span]:mx-2 [&_span]:my-[5px] [&_span]:block [&_span]:size-2 [&_span]:rounded-[30px] [&_span]:bg-[#d6d6d6]">
                     {entries.map((entry, i) => (
                       <button
                         key={entry.id}
