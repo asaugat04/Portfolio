@@ -3,7 +3,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { serverEnv } from "@/constants/env.server";
-import { themeInitScript } from "@/constants/theme";
+import { themeStorageKey } from "@/constants/theme";
+import { ThemeProvider } from "next-themes";
 import { site } from "@/constants/site";
 import { Analytics } from "@/components/shared/analytics";
 import "./globals.css";
@@ -58,11 +59,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
       <body>
-        {children}
+        <ThemeProvider
+          attribute="data-portfolio-theme"
+          storageKey={themeStorageKey}
+          defaultTheme="system"
+          enableColorScheme={false}
+        >
+          {children}
+        </ThemeProvider>
         <Analytics vercel={serverEnv.VERCEL === "1"} />
         {serverEnv.VERCEL === "1" && <SpeedInsights />}
       </body>

@@ -1,7 +1,6 @@
 "use client";
 import {
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
   useSyncExternalStore,
@@ -9,46 +8,9 @@ import {
 } from "react";
 import { cn } from "@/lib/utils";
 import { homeNavigation, routes } from "@/constants/routes";
-import { themeStorageKey, themeMediaQuery } from "@/constants/theme";
+import { useTheme } from "next-themes";
+import { mavenPro, unicons } from "@/constants/fonts";
 
-function applyPreferredTheme() {
-  let saved;
-  try {
-    saved = localStorage.getItem(themeStorageKey);
-  } catch {}
-  document.documentElement.dataset.portfolioTheme =
-    saved === "light" || saved === "dark"
-      ? saved
-      : window.matchMedia(themeMediaQuery).matches
-        ? "dark"
-        : "light";
-}
-function subscribeTheme(callback: () => void) {
-  const query = window.matchMedia(themeMediaQuery);
-  function update() {
-    applyPreferredTheme();
-    callback();
-  }
-  query.addEventListener("change", update);
-  window.addEventListener("storage", update);
-  window.addEventListener(themeStorageKey, callback);
-  return () => {
-    query.removeEventListener("change", update);
-    window.removeEventListener("storage", update);
-    window.removeEventListener(themeStorageKey, callback);
-  };
-}
-function toggleTheme() {
-  const next =
-    document.documentElement.dataset.portfolioTheme === "dark"
-      ? "light"
-      : "dark";
-  try {
-    localStorage.setItem(themeStorageKey, next);
-  } catch {}
-  document.documentElement.dataset.portfolioTheme = next;
-  window.dispatchEvent(new Event(themeStorageKey));
-}
 export function SiteShell({
   children,
   navigation,
@@ -56,10 +18,10 @@ export function SiteShell({
   children: React.ReactNode;
   navigation: readonly (typeof homeNavigation)[number][];
 }) {
-  useLayoutEffect(applyPreferredTheme, []);
-  const dark = useSyncExternalStore(
-    subscribeTheme,
-    () => document.documentElement.dataset.portfolioTheme === "dark",
+  const { resolvedTheme, setTheme } = useTheme();
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
     () => false,
   );
   const [expanded, setExpanded] = useState(false);
@@ -111,7 +73,10 @@ export function SiteShell({
     requestAnimationFrame(animate);
   }
   return (
-    <div className="portfolio" onClick={navigate}>
+    <div
+      className={cn("portfolio", mavenPro.variable, unicons.variable)}
+      onClick={navigate}
+    >
       <nav
         ref={navRef}
         className={cn(
@@ -160,9 +125,11 @@ export function SiteShell({
                 <button
                   type="button"
                   className="color-mode mx-auto items-center justify-center min-[992px]:flex"
-                  onClick={toggleTheme}
+                  onClick={() =>
+                    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                  }
                   aria-label="Toggle color mode"
-                  aria-pressed={dark}
+                  aria-pressed={mounted ? resolvedTheme === "dark" : undefined}
                 >
                   <i className="color-mode-icon" aria-hidden="true" />
                   <span className="color-mode-text">Color mode</span>
