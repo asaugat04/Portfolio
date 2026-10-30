@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://asaugat.com.np/sitemap.xml
