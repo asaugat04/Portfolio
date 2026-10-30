@@ -75,7 +75,9 @@ export function Contact({
                           <FontAwesomeIcon icon={icon} />
                         </div>
                         <div className="ml-4">
-                          <h3 className="!m-0 !text-xl text-white">{label}</h3>
+                          <h3 className="!m-0 !text-[1.25rem] text-white">
+                            {label}
+                          </h3>
                           <p className="!m-0">
                             {href ? <a href={href}>{value}</a> : value}
                           </p>

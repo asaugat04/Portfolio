@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata, Viewport } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { serverEnv } from "@/constants/env.server";
+import { themeInitScript } from "@/constants/theme";
 import { site } from "@/constants/site";
 import { Analytics } from "@/components/shared/analytics";
 import "./globals.css";
@@ -56,7 +57,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>
         {children}
         <Analytics vercel={serverEnv.VERCEL === "1"} />

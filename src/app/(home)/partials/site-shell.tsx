@@ -1,6 +1,7 @@
 "use client";
 import {
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
   useSyncExternalStore,
@@ -8,12 +9,45 @@ import {
 } from "react";
 import { cn } from "@/lib/utils";
 import { homeNavigation, routes } from "@/constants/routes";
+import { themeStorageKey, themeMediaQuery } from "@/constants/theme";
 
-const media = "(prefers-color-scheme: dark)";
+function applyPreferredTheme() {
+  let saved;
+  try {
+    saved = localStorage.getItem(themeStorageKey);
+  } catch {}
+  document.documentElement.dataset.portfolioTheme =
+    saved === "light" || saved === "dark"
+      ? saved
+      : window.matchMedia(themeMediaQuery).matches
+        ? "dark"
+        : "light";
+}
 function subscribeTheme(callback: () => void) {
-  const query = window.matchMedia(media);
-  query.addEventListener("change", callback);
-  return () => query.removeEventListener("change", callback);
+  const query = window.matchMedia(themeMediaQuery);
+  function update() {
+    applyPreferredTheme();
+    callback();
+  }
+  query.addEventListener("change", update);
+  window.addEventListener("storage", update);
+  window.addEventListener(themeStorageKey, callback);
+  return () => {
+    query.removeEventListener("change", update);
+    window.removeEventListener("storage", update);
+    window.removeEventListener(themeStorageKey, callback);
+  };
+}
+function toggleTheme() {
+  const next =
+    document.documentElement.dataset.portfolioTheme === "dark"
+      ? "light"
+      : "dark";
+  try {
+    localStorage.setItem(themeStorageKey, next);
+  } catch {}
+  document.documentElement.dataset.portfolioTheme = next;
+  window.dispatchEvent(new Event(themeStorageKey));
 }
 export function SiteShell({
   children,
@@ -22,13 +56,12 @@ export function SiteShell({
   children: React.ReactNode;
   navigation: readonly (typeof homeNavigation)[number][];
 }) {
-  const systemDark = useSyncExternalStore(
+  useLayoutEffect(applyPreferredTheme, []);
+  const dark = useSyncExternalStore(
     subscribeTheme,
-    () => window.matchMedia(media).matches,
+    () => document.documentElement.dataset.portfolioTheme === "dark",
     () => false,
   );
-  const [override, setOverride] = useState<boolean | null>(null);
-  const dark = override ?? systemDark;
   const [expanded, setExpanded] = useState(false);
   const [scroll, setScroll] = useState({ hidden: false, scrolled: false });
   const navRef = useRef<HTMLElement>(null);
@@ -78,7 +111,7 @@ export function SiteShell({
     requestAnimationFrame(animate);
   }
   return (
-    <div className={cn("portfolio", dark && "dark-mode")} onClick={navigate}>
+    <div className="portfolio" onClick={navigate}>
       <nav
         ref={navRef}
         className={cn(
@@ -127,14 +160,11 @@ export function SiteShell({
                 <button
                   type="button"
                   className="color-mode mx-auto items-center justify-center min-[992px]:flex"
-                  onClick={() => setOverride(!dark)}
+                  onClick={toggleTheme}
                   aria-label="Toggle color mode"
                   aria-pressed={dark}
                 >
-                  <i
-                    className={cn("color-mode-icon", dark && "active")}
-                    aria-hidden="true"
-                  />
+                  <i className="color-mode-icon" aria-hidden="true" />
                   <span className="color-mode-text">Color mode</span>
                 </button>
               </div>

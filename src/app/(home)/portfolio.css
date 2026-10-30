@@ -29,7 +29,7 @@
     background-color: var(--portfolio-canvas);
   }
 
-  html:has(.portfolio.dark-mode) {
+  html[data-portfolio-theme="dark"]:has(.portfolio) {
     --portfolio-canvas: #0c0c0d;
     color-scheme: dark;
   }
@@ -42,7 +42,7 @@
     color: #212529;
     background: white;
     min-height: 100vh;
-    &.dark-mode {
+    html[data-portfolio-theme="dark"] & {
       --portfolio-accent-text: #ffc200;
       background: #0c0c0d;
     }
@@ -158,7 +158,7 @@
       font-size: 1em;
       line-height: normal;
       display: block;
-      visibility: hidden;
+      opacity: 0;
       overflow: hidden;
       white-space: nowrap;
       position: absolute;
@@ -238,10 +238,6 @@
       font-size: 30px;
       font-weight: 300;
       font-style: normal;
-    }
-    .color-mode-icon.active::after {
-      content: "\eb65";
-      color: white;
     }
     .nav-toggle {
       border: 0;
@@ -498,7 +494,11 @@
     .uil-file-alt::before {
       content: "\e9af";
     }
-    &.dark-mode {
+    html[data-portfolio-theme="dark"] & {
+      .color-mode-icon::after {
+        content: "\eb65";
+        color: white;
+      }
       .site-menu,
       .nav-toggle {
         background: #0c0c0d;
@@ -553,20 +553,20 @@
   }
   @keyframes BottomTotop {
     0% {
-      visibility: hidden;
+      opacity: 0;
       transform: translateY(8px);
     }
     6%,
     44% {
-      visibility: visible;
+      opacity: 1;
       transform: translateY(0);
     }
     50% {
-      visibility: hidden;
+      opacity: 0;
       transform: translateY(-8px);
     }
     100% {
-      visibility: hidden;
+      opacity: 0;
     }
   }
   @media (min-width: 576px) {
@@ -693,7 +693,7 @@
       scroll-behavior: auto !important;
     }
     .portfolio .animated-item:first-child {
-      visibility: visible;
+      opacity: 1;
       position: relative;
     }
     .portfolio .animated-item:nth-child(2) {

@@ -77,14 +77,14 @@ export function Certifications({
                 <>
                   <div className="carousel-navigation">
                     <button
-                      className="carousel-arrow -left-[45px]"
+                      className="carousel-arrow -left-[15px] min-[992px]:-left-[45px]"
                       aria-label="Previous certification"
                       onClick={() => move(-1)}
                     >
                       &#xe833;
                     </button>
                     <button
-                      className="carousel-arrow -right-[45px]"
+                      className="carousel-arrow -right-[15px] min-[992px]:-right-[45px]"
                       aria-label="Next certification"
                       onClick={() => move(1)}
                     >
