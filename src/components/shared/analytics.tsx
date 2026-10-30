@@ -1,6 +1,7 @@
 "use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { site } from "@/constants/site";
 import { routes } from "@/constants/routes";
 
@@ -17,6 +18,7 @@ export function Analytics() {
         id="google-analytics"
         strategy="afterInteractive"
       >{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(site.analyticsId)});`}</Script>
+      <VercelAnalytics />
     </>
   );
 }

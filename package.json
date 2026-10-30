@@ -40,6 +40,7 @@
     "@prisma/adapter-neon": "7.10.1",
     "@prisma/client": "7.10.1",
     "@tailwindcss/postcss": "^4.3.3",
+    "@vercel/analytics": "^2.0.1",
     "better-auth": "^1.7.14",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.11.0",
