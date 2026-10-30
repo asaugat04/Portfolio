@@ -14,7 +14,7 @@ export function Skills({ entries }: { entries: ContentEntry<"skills">[] }) {
                   style={{ width: 10, height: 10 }}
                 />
                 <div className="timeline-info mb-2" style={{ marginLeft: 16 }}>
-                  <h5>
+                  <h3 className="!text-xl">
                     <span>
                       {data.title}
                       <small style={{ fontSize: "small", fontWeight: 300 }}>
@@ -22,7 +22,7 @@ export function Skills({ entries }: { entries: ContentEntry<"skills">[] }) {
                         {data.description}
                       </small>
                     </span>
-                  </h5>
+                  </h3>
                 </div>
               </div>
             ))}
