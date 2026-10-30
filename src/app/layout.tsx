@@ -1,6 +1,7 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata, Viewport } from "next";
+import { serverEnv } from "@/constants/env.server";
 import { site } from "@/constants/site";
 import { Analytics } from "@/components/shared/analytics";
 import "./globals.css";
@@ -57,7 +58,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <Analytics />
+        <Analytics vercel={serverEnv.VERCEL === "1"} />
       </body>
     </html>
   );

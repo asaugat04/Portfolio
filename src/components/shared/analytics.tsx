@@ -5,7 +5,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { site } from "@/constants/site";
 import { routes } from "@/constants/routes";
 
-export function Analytics() {
+export function Analytics({ vercel }: { vercel: boolean }) {
   const pathname = usePathname();
   if (pathname.startsWith(routes.admin)) return null;
   return (
@@ -18,7 +18,7 @@ export function Analytics() {
         id="google-analytics"
         strategy="afterInteractive"
       >{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(site.analyticsId)});`}</Script>
-      <VercelAnalytics />
+      {vercel && <VercelAnalytics />}
     </>
   );
 }
