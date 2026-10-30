@@ -1,0 +1,25 @@
+# Dependencies and generated output
+node_modules/
+.next/
+out/
+build/
+dist/
+next-env.d.ts
+*.tsbuildinfo
+src/generated/
+
+# Credentials and local deployment configuration
+.env*
+!.env.example
+.vercel/
+*.pem
+
+# Local tooling and operating-system files
+/AGENTS.md
+.idea/
+.vscode/
+.codex/
+.claude/
+.DS_Store
+Thumbs.db
+*.log
