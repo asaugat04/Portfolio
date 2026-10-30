@@ -59,15 +59,17 @@ export function Certifications({
                       className="certificate-slide w-full shrink-0"
                       aria-hidden={i !== active}
                     >
-                      <PortfolioImage
-                        src={data.image}
-                        className="px-12"
-                        alt={`${data.title} certification`}
-                        width={1600}
-                        height={1200}
-                        sizes="(min-width: 1200px) 920px, (min-width: 768px) 80vw, 100vw"
-                        loading="lazy"
-                      />
+                      <div className="mx-12 aspect-[1600/1131]">
+                        <PortfolioImage
+                          src={data.image}
+                          className="h-full w-full object-contain"
+                          alt={`${data.title} certification`}
+                          width={1600}
+                          height={1131}
+                          sizes="(min-width: 1200px) 920px, (min-width: 768px) 80vw, calc(100vw - 126px)"
+                          loading="lazy"
+                        />
+                      </div>
                       <h3 className="mt-2">{data.title}</h3>
                       <p className="ml-6 w-[93%] px-1">{data.description}</p>
                     </div>
